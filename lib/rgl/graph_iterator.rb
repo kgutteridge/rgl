@@ -1,4 +1,4 @@
-require 'stream'
+#require 'stream'
 
 require 'rgl/graph_wrapper'
 
@@ -8,7 +8,7 @@ module RGL
   # Each graph iterator should implement the protocol defined in module Stream.
   #
   module GraphIterator
-    include Stream
+   # include Stream
     include GraphWrapper
   end
 
