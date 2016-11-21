@@ -1,4 +1,4 @@
-require 'psych/stream'
+require 'kgutteridge/streamiterator'
 
 require 'rgl/graph_wrapper'
 
@@ -8,7 +8,7 @@ module RGL
   # Each graph iterator should implement the protocol defined in module Stream.
   #
   module GraphIterator
-    include Stream
+    include StreamIterator
     include GraphWrapper
   end
 
