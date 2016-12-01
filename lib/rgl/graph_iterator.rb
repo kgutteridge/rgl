@@ -1,4 +1,4 @@
-require 'kgutteridge/streamiterator'
+require 'streamiterator'
 
 require 'rgl/graph_wrapper'
 
