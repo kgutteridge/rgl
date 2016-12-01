@@ -77,22 +77,23 @@ def bfs_example(g = cycle(5), start = g.detect { |x| true })
 end
 
 # Would like to have GraphXML here
-def graph_from_dotfile (file)
-  g = RGL::AdjacencyGraph.new
-  pattern = /\s*([^\"]+)[\"\s]*--[\"\s]*([^\"\[\;]+)/ # ugly but works
-  IO.foreach(file) { |line|
-    case line
-      when /^digraph/
-        g = RGL::DirectedAdjacencyGraph.new
-        pattern = /\s*([^\"]+)[\"\s]*->[\"\s]*([^\"\[\;]+)/
-      when pattern
-        g.add_edge $1, $2
-      else
-        nil
-    end
-  }
-  g
-end
+
+# def graph_from_dotfile (file)
+#   g = RGL::AdjacencyGraph.new
+#   pattern = /\s*([^\"]+)[\"\s]*--[\"\s]*([^\"\[\;]+)/ # ugly but works
+#   IO.foreach(file) { |line|
+#     case line
+#       when /^digraph/
+#         g = RGL::DirectedAdjacencyGraph.new
+#         pattern = /\s*([^\"]+)[\"\s]*->[\"\s]*([^\"\[\;]+)/
+#       when pattern
+#         g.add_edge $1, $2
+#       else
+#         nil
+#     end
+#   }
+#   g
+# end
 
 # ruby -Ilib -r examples/examples.rb -rrgl/dot -e'bfs_example(module_graph,RGL::AdjacencyGraph).dotty'
 

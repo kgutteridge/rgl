@@ -8,8 +8,6 @@ Gem::Specification.new do |s|
   s.description = "RGL is a framework for graph data structures and algorithms"
 
   #### Dependencies and requirements.
-
-  s.add_dependency 'streamiterator',     '~> 0.5.2'
   s.add_dependency 'lazy_priority_queue', '~> 0.1.0'
 
   s.add_development_dependency 'rake'
