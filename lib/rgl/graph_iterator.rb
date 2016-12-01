@@ -8,7 +8,7 @@ module RGL
   # Each graph iterator should implement the protocol defined in module Stream.
   #
   module GraphIterator
-    include StreamIterator
+    include Streamiterator
     include GraphWrapper
   end
 
